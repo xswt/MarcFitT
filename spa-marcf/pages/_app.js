@@ -1,18 +1,20 @@
 import '@/styles/globals.css'
 import { appWithTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorScreen from './ErrorScreen';
+
+
+function fallbackRender({ error }) {
+  return (
+    <ErrorScreen error={error}></ErrorScreen>
+  );
+}
 
 const App = ({ Component, pageProps }) => (
+  <ErrorBoundary fallbackRender={fallbackRender}>
     <Component {...pageProps} />
+  </ErrorBoundary>
 )
 
 export default appWithTranslation(App)
 
-export async function getStaticProps(context) {
-  const { locale } = context
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
-}

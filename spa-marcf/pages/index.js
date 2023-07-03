@@ -10,21 +10,31 @@ import { LandingPage } from './LandingPage'
 
 export default function Home() {
 
-  const { t } = useTranslation()
 
     const [appLoad, setAppLoad] = useState(false)
+
 
     useEffect(() => {
      const queryParameters = new URLSearchParams(window.location.search)
      setAppLoad(queryParameters.get("appLoad"))
     }, [])
 
-  if(appLoad==="true") return (<><MainScreen></MainScreen></>)
+
+  if(appLoad==="true") return (
+  <>
+      <MainScreen></MainScreen>
+  </>)
 
   return (<><LandingPage></LandingPage></>)
 
 
 }
+
+
+
+
+
+
 
 export async function getStaticProps(context) {
   // extract the locale identifier from the URL
