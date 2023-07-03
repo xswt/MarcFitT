@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 
-const ErrorScreen = () => {
+const ErrorScreen = ({error}) => {
 
   const { t } = useTranslation()
 
-
+  console.log("MENSAJE ERROR",error)
 
   
 
@@ -13,7 +13,9 @@ const ErrorScreen = () => {
 
   return (
     <div>
-      <h1>{t("HELLO_WORLD")}</h1>
+     ERROR SCREEN
+     <br></br>
+     {error.message}
       </div>
   )
 }

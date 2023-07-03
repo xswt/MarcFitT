@@ -6,6 +6,7 @@ export const MainScreen = () => {
   const { t } = useTranslation()
 
 
+
   return (
     <div>
         <h1>{t("HELLO_WORLD")}</h1>
