@@ -1,1 +1,2 @@
-{ "HELLO_WORLD": "Hola, Mundo!" }
+{ "HELLO_WORLD": "Hola, Mundo!" ,
+ "ERROR_SCREEN": "ErrorScreen" } 
