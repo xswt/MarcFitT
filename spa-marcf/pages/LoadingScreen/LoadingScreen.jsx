@@ -19,7 +19,11 @@ const LoadingScreen = () => {
             style={{width:"100%", height:"100%"}}
          /> 
          </div>
-         <img src={imagenLogo.src} style={{height:"100px",zIndex: 2}}/>
+         <div className={LoadingScreenStyle.boxBallLine}>
+         
+         </div>
+
+         <img src={imagenLogo.src} style={{height:"80px",zIndex: 2}}/>
     </main>
   )
 }
