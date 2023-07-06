@@ -1,32 +1,22 @@
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
 import { useEffect, useState } from 'react'
-import { MainScreen } from './MainScreen'
-import { LandingPage } from './LandingPage'
-
-
+import { MainScreen } from './MainScreen/MainScreen'
+import LoadingScreen from './LoadingScreen/LoadingScreen'
+import { LandingPage } from './LandingPage/LandingPage'
 
 
 export default function Home() {
-
-
     const [appLoad, setAppLoad] = useState(false)
-
 
     useEffect(() => {
      const queryParameters = new URLSearchParams(window.location.search)
      setAppLoad(queryParameters.get("appLoad"))
     }, [])
 
+  if(!appLoad) return(<><LoadingScreen></LoadingScreen></>)
 
-  if(appLoad==="true") return (
-  <>
-      <MainScreen></MainScreen>
-  </>)
-
-  return (<><LandingPage></LandingPage></>)
-
+  return (<>{(appLoad==="true")?<MainScreen></MainScreen>:<LandingPage></LandingPage>}</>)
 
 }
 
