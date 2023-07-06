@@ -3,6 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useEffect, useState } from 'react'
 import { MainScreen } from './MainScreen/MainScreen'
 import LoadingScreen from './LoadingScreen/LoadingScreen'
+import { LandingPage } from './LandingPage/LandingPage'
 
 
 export default function Home() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import LoadingScreenStyle from './LoadingScreen.module.css'
 import Image from 'next/image'
-import imagenBall from '../../public/images/ball.jpg'
+import imagenBall from '../../public/images/ball2.jpg'
 import imagenLogo from '../../public/images/logoBlancoSinLetrasFondo.png'
 
 
@@ -20,10 +20,7 @@ const LoadingScreen = () => {
          /> 
          </div>
          <div className={LoadingScreenStyle.boxBallLine}>
-         
          </div>
-
-         <img src={imagenLogo.src} style={{height:"80px",zIndex: 2}}/>
     </main>
   )
 }
