@@ -1,2 +1,5 @@
-{ "HELLO_WORLD": "Hello, World!" , 
- "ERROR_SCREEN": "ErrorScreen" }
+{ 
+    "LogInScreen_InicioSesion_Button": "LOGIN",
+    "LogInScreen_InicioSesion_textoUser": "User",
+    "LogInScreen_InicioSesion_textoPassword": "Password"
+}

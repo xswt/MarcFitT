@@ -1,0 +1,30 @@
+.mainBoxApp{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogInFormBox{
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    max-width: 280px;
+    width: 80vw;
+    padding: 10px;
+    justify-content: center;
+    /* From https://css.glass */
+    background: rgba(0, 6, 20, 0.53);
+    border-radius: var(--border-radius-FormInicio);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.3px);
+    -webkit-backdrop-filter: blur(11.3px);
+    border: 1px solid rgba(255, 255, 255, 0.575);
+}
+
+.logoBox{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
