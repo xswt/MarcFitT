@@ -1,0 +1,28 @@
+Métodos HTTP más comunes y cómo se utilizan:
+
+PUEDES ENCONTRAR UN EJEMPLO DE CADA LLAMADA EN w_serviciosEjemplos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+GET:
+El método GET se utiliza para recuperar información o recursos del servidor. Se envía una solicitud GET para obtener datos del servidor,
+y la respuesta contiene los datos solicitados. No debe tener efectos secundarios en el servidor y se considera "seguro" e "idempotente".
+
+POST:
+El método POST se utiliza para enviar datos al servidor para crear un nuevo recurso. Se envía una solicitud POST con los datos que se desean
+enviar y el servidor crea un nuevo recurso con esos datos. No es "idempotente" porque enviar la misma solicitud POST varias veces puede crear recursos duplicados.
+
+PUT:
+El método PUT se utiliza para enviar datos al servidor para actualizar completamente un recurso existente.
+Se envía una solicitud PUT con los datos actualizados y el servidor reemplaza completamente el recurso existente con los nuevos datos.
+Se considera "idempotente" porque enviar la misma solicitud PUT varias veces dará como resultado el mismo estado del recurso.
+
+PATCH:
+El método PATCH se utiliza para enviar datos al servidor para actualizar parcialmente un recurso existente. A diferencia de PUT,
+PATCH no reemplaza completamente el recurso, sino que aplica modificaciones o actualizaciones específicas al recurso.
+Puede enviar solo los campos que deben actualizarse, lo que hace que PATCH sea útil para realizar cambios parciales en el recurso.
+
+DELETE:
+El método DELETE se utiliza para solicitar al servidor que elimine un recurso específico. Se envía una solicitud DELETE para eliminar un recurso identificado por su URI.
+Al igual que GET, DELETE se considera "seguro" e "idempotente" en términos de no tener efectos secundarios en el servidor y producir el mismo resultado si se repite.
+
+
+Estos son los métodos HTTP más comunes utilizados en el desarrollo de API RESTful. Además de estos, también existen otros métodos menos utilizados, como OPTIONS, HEAD y TRACE, que tienen sus propios usos y características específicas.

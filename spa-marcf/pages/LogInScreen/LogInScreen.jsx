@@ -17,6 +17,21 @@ export const LogInScreen = () => {
     userName:"",
     userPassword:""
   })
+  const [userLogData, setUserLogData] = useState("")
+
+  const handleLogIn= async  ()=>{
+    try{
+      const llamada =  await fetch('http://localhost:3003/datos/ruta3')
+      const datos = await llamada.json()
+      setUserLogData(datos);
+  }
+  catch(error){
+      console.log("detectado error",error);
+  }
+
+  }
+
+ console.log("EJEMPLO",userLogData) 
 
 
 
@@ -34,7 +49,7 @@ export const LogInScreen = () => {
       {/* CONTENIDO GLOBAL DE LogInScreen */}
       <main className={LogInScreenStyle.mainBoxApp}>
         {/* IMAGEN DE FONDO/BACKGROUND */}
-        <Image src="/images/bgWPT3.jpg" alt="WPT" fill style={{ objectFit: "cover", zIndex: -1}}/> 
+        <Image src="/images/bgAppT.jpg" alt="WPT" fill style={{ objectFit: "cover", zIndex: -1}}/> 
 
         {/* BOX DE TODO EL FORMULARIO PARA INICIAR SESIÓN */}
         <div className={LogInScreenStyle.LogInFormBox}>
@@ -66,7 +81,7 @@ export const LogInScreen = () => {
           </div>
           
           {/* BTN INICIO SESIÓN*/}
-          <div className={LogInScreenStyle.btnLogin} onClick={()=>{console.log(userDataLogin)}}> {t("LogInScreen_InicioSesion_Button")} </div>
+          <div className={LogInScreenStyle.btnLogin} onClick={()=>{handleLogIn()}}> {t("LogInScreen_InicioSesion_Button")} </div>
 
         </div>
         </div>

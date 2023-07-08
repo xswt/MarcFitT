@@ -13,13 +13,13 @@
     width: 80vw;
     padding: 10px;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     /* From https://css.glass */
-    background: rgba(0, 6, 20, 0.53);
-    border-radius: var(--border-radius-FormInicio);
+    background: rgba(14, 14, 14, 0.66);
+    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.3px);
-    -webkit-backdrop-filter: blur(11.3px);
-    border: 1px solid rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
 }
 
 .logoBox{
@@ -70,13 +70,13 @@
     width: 30px;
     margin-right: -1px;
     height: 100%;
-    background-color: #3050FA;
+    background-color: #94958E;
     border-radius: 0 var(--border-radius-FormInicio) var(--border-radius-FormInicio) 0px;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .cursorP:hover{
-    background-color: #15229b;
+    background-color: #3f3f3e;
     cursor: pointer;
 }
 
@@ -90,7 +90,7 @@
     color: white;
     letter-spacing: 1px;
     -webkit-text-stroke: 0.2px black;
-    background-color: #3050FA;
+    background-color: #94958E;
     user-select: none;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     margin-top: 15px;
@@ -98,5 +98,5 @@
 
 .btnLogin:hover{
     cursor: pointer;
-    background-color: #15229b;
+    background-color: #3f3f3e;
 }

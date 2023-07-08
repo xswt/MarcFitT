@@ -1,8 +1,7 @@
 import React from 'react'
 import LoadingScreenStyle from './LoadingScreen.module.css'
 import Image from 'next/image'
-import imagenBall from '../../public/images/ball2.jpg'
-import imagenLogo from '../../public/images/logoBlancoSinLetrasFondo.png'
+import imagenBall from '../../public/images/loadingLogo.jpg'
 
 
 

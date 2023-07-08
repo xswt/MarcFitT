@@ -1,0 +1,28 @@
+
+const express = require('express'); //IMPORTAMOS EXPRESS
+
+const router = express.Router(); //IMPORTAMOS EL ROUTER DE EXPRESS PARA PODER PASAR LOS MICROSERVICIOS AL APP.JS
+
+const db = require('../conexionBD');//IMPORTAMOS LA CONEXION REALIZADA A BD
+
+//EJEMPLO BASICO DE MICROSERVICIO TIPO GET
+router.get('/ruta1', (req, res) => { //EN EL PRIMER PARAMETRO ESPECIFICAMOS LA RUTA QUE TIENE QUE LLAMAR EL USUARIO PARA PODER EJECUTAR EL SERVICIO
+
+
+  const query = 'SELECT * FROM user'; // FORMATEAMOS UNA QUERY Y LA GUARDAMOS EN UNA CONST
+
+  db.query(query, (error, results) => { //REALIZAMOS LA CONSULTA QUERY A LA BD CON LA CONEXION QUE HEMOS IMPORTADO ANTES
+    if (error) {//CONTROLAMOS POSIBLE ERROR
+      console.error('Error al obtener datos de la base de datos:', error);
+      res.status(500).json({ error: 'Error al obtener datos' });
+      return;
+    }
+
+    res.json(results); //DEVOLVEMOS EL RESULTADO
+
+    // db.end(); PARA CERRAR LA CONEXION A BD EXISTE EL db.end ES IMPORTANTE NO PONERLO YA QUE LA SPA REQUIERE USO CONTINUO DE MICROSERVICIOS, SOLO SE USA PARA CERRAR EL BACK POR COMPLETO EN CIERTOS CASOS.
+  });
+});
+
+
+module.exports = router; //EXPORTAMOS LOS MICROSERVICIOS GENERADOS, SERIAN TODOS AQUELLOS QUE TIENEN reouter.algo EN ESTE CASO TENEMOS EN LA LINEA 9 router.get
